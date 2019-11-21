@@ -8,16 +8,6 @@ import { Collaborator } from '../collaborator';
 })
 export class InscriptionComponent implements OnInit {
 
-  collaborator: Collaborator = {
-    id: 1,
-    lastname: 'Selecta',
-    firstname: 'Le bg',
-    date_naiss: '22-07-1997',
-    role: 1,
-    mail: 'a@a.fr',
-    password: 'test'
-  };
-
   constructor() { }
 
   ngOnInit() {
