@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable} from 'rxjs';
-import {Collaborator} from '../collaborator';
+import {Collaborateur} from '../models/collaborateur';
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/Json' })
@@ -22,7 +22,7 @@ export class CollaborateurService {
     return this.http.delete<any[]>('http://localhost:9090/collaborateur/delete/' + collaborateurId);
   }
 
-  createCollaborateur(collaborateur: Collaborator): Observable<Collaborator> {
-    return this.http.post<Collaborator>('http://localhost:9090/collaborateur/create', collaborateur);
+  createCollaborateur(collaborateur: Collaborateur): Observable<Collaborateur> {
+    return this.http.post<Collaborateur>('http://localhost:9090/collaborateur/create', collaborateur);
   }
 }

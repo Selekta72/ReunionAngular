@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {CollaborateurService} from '../../services/collaborateur.service';
+import {Collaborateur} from '../../models/collaborateur';
 
 @Component({
   selector: 'app-collaborateur',
@@ -8,7 +9,7 @@ import {CollaborateurService} from '../../services/collaborateur.service';
 })
 export class CollaborateurComponent implements OnInit {
 
-  collaborateurs: Array<any>;
+  collaborateurs: Array<Collaborateur>;
 
   constructor(private collaborateurService: CollaborateurService) { }
 

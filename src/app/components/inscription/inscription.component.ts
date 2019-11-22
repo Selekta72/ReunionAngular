@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Collaborator } from '../../collaborator';
+import { Collaborateur } from '../../models/collaborateur';
 import {RoleService} from '../../services/role.service';
 import {CollaborateurService} from '../../services/collaborateur.service';
 
@@ -11,7 +11,7 @@ import {CollaborateurService} from '../../services/collaborateur.service';
 export class InscriptionComponent implements OnInit {
 
   roles: Array<any>;
-  collaborateur: Collaborator = new Collaborator();
+  collaborateur: Collaborateur = new Collaborateur();
 
   constructor(private roleService: RoleService, private collaborateurService: CollaborateurService) { }
 

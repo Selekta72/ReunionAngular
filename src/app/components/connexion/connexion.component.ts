@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Collaborator } from '../../collaborator';
+import { Collaborateur } from '../../models/collaborateur';
 
 @Component({
   selector: 'app-connexion',

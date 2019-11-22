@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {CollaborateurService} from '../../services/collaborateur.service';
+import {Reunions} from '../../models/reunions';
+import {ReunionService} from '../../services/reunion.service';
 
 @Component({
   selector: 'app-addreunion',
@@ -7,9 +10,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddreunionComponent implements OnInit {
 
-  constructor() { }
+  reunion: Reunions = new Reunions();
+  collaborateurs: Array<any>;
+
+  constructor(private collaborateurService: CollaborateurService, private reunionService: ReunionService) { }
 
   ngOnInit() {
+    this.collaborateurService.getAllCollaborateurs().subscribe(response => {
+      this.collaborateurs = response;
+      console.log(this.collaborateurs);
+    });
+  }
+
+  createReunion() {
+      this.reunionService.createReunion(this.reunion).subscribe(response => {
+        console.log(response);
+      });
   }
 
 }

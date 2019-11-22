@@ -1,1 +1,99 @@
-<p>addreunion works!</p>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">Gestion Réunions</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/dashboard">Dashboard
+
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/collaborateur">Collaborateurs</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/addreunion">Ajouter réunion
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">blabla</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <br><br>
+  <div class="card bg-light">
+    <article class="card-body mx-auto" style="max-width: 400px;">
+
+      <h4 class="card-title mt-3 text-center">Creation d'une reunion</h4>
+      <form>
+
+        <div class="form-group input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text"> <i class="fa fa-user-circle"></i> </span>
+          </div>
+          <input name="nom" [(ngModel)]="reunion.libelle" class="form-control" placeholder="Libellé" type="text">
+          <div class="input-group-prepend">
+            <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+          </div>
+          <input name="prenom" [(ngModel)]="reunion.objectif" class="form-control" placeholder="Objectif" type="text">
+        </div> <!-- form-group// -->
+
+        <div class="form-group input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text"> <i class="fa fa-calendar"></i> </span>
+          </div>
+          <input name="dateNaissance" [(ngModel)]="reunion.date" class="form-control" placeholder="Date" type="date">
+        </div> <!-- form-group// -->
+
+        <div class="form-group input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text"> <i class="fa fa-building"></i> </span>
+          </div>
+          <select class="form-control" name="role" multiple [(ngModel)]="reunion.participants">
+            <option selected="" disabled [value]="null">Choisir participants</option>
+            <option *ngFor="let collaborateur of collaborateurs" [ngValue]="collaborateur">{{collaborateur.prenom}} {{collaborateur.nom}}</option>
+          </select>
+        </div> <!-- form-group end.// -->
+
+        <div class="form-group input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text"> <i class="fa fa-building"></i> </span>
+          </div>
+          <select class="form-control" name="role" [(ngModel)]="reunion.referant">
+            <option selected="" disabled [value]="null">Choisir référant</option>
+            <option *ngFor="let collaborateur of collaborateurs" [ngValue]="collaborateur">{{collaborateur.prenom}} {{collaborateur.nom}}</option>
+          </select>
+        </div> <!-- form-group end.// -->
+
+        <div class="form-group input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+          </div>
+          <input name="email" class="form-control" [(ngModel)]="reunion.lieu" placeholder="Lieu" type="email">
+        </div> <!-- form-group// -->
+
+        <div class="form-group">
+          <button type="submit" (click)="createReunion()" class="btn btn-primary btn-block"> Créer la réunion</button>
+        </div> <!-- form-group// -->
+      </form>
+    </article>
+  </div> <!-- card.// -->
+</div>
+
+<article class="bg-secondary mb-3 navbar-fixed-bottom">
+  <div class="card-body text-center">
+    <h3 class="text-white mt-3">Gestion de réunions</h3>
+    <p class="h5 text-white">Bouchet Séverin | Pinto Julien | Duperray Aurélien | Marie Damien</p>
+  </div>
+</article>
