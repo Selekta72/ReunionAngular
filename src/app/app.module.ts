@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { InscriptionComponent } from './components/inscription/inscription.component';
 import { ConnexionComponent } from './components/connexion/connexion.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { CollaborateurComponent } from './components/collaborateur/collaborateur.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     InscriptionComponent,
     ConnexionComponent,
-    DashboardComponent
+    DashboardComponent,
+    CollaborateurComponent
   ],
   imports: [
     BrowserModule,
