@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Collaborator } from '../collaborator';
+import { Collaborator } from '../../collaborator';
 
 @Component({
   selector: 'app-inscription',
@@ -8,11 +8,10 @@ import { Collaborator } from '../collaborator';
 })
 export class InscriptionComponent implements OnInit {
 
+  title = 'Inscription';
+
   constructor() { }
 
   ngOnInit() {
   }
-
-  title = 'Inscription';
-  
 }

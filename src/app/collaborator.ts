@@ -2,7 +2,7 @@ export class Collaborator {
     id: number;
     lastname: string;
     firstname: string;
-    date_naiss: string;
+    dateNaissance: string;
     role: number;
     mail: string;
     password: string;

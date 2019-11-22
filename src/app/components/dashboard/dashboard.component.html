@@ -43,25 +43,11 @@
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
-                        <td>Severin</td>
-                        <td>Refonte graphique du logo</td>
-                        <td>21/11/2019</td>
-                        <td>CESI Le Mans</td>
-                        <td><a href="blabla" class="btn btn-success">Informations</a></td>
-                      </tr>
-                      <tr>
-                        <td>Severin</td>
-                        <td>Refonte graphique du logo</td>
-                        <td>21/11/2019</td>
-                        <td>CESI Le Mans</td>
-                        <td><a href="blabla" class="btn btn-success">Informations</a></td>
-                      </tr>
-                      <tr>
-                        <td>Severin</td>
-                        <td>Refonte graphique du logo</td>
-                        <td>21/11/2019</td>
-                        <td>CESI Le Mans</td>
+                      <tr *ngFor="let reunion of reunions">
+                        <td>{{reunion.referant.prenom}} {{reunion.referant.nom}}</td>
+                        <td>{{reunion.objectif}}</td>
+                        <td>{{reunion.date}}</td>
+                        <td>{{reunion.lieu}}</td>
                         <td><a href="blabla" class="btn btn-success">Informations</a></td>
                       </tr>
                     </tbody>
