@@ -22,7 +22,7 @@ export class CollaborateurService {
     return this.http.delete<any[]>('http://localhost:9090/collaborateur/delete/' + collaborateurId);
   }
 
-  createCollaborateur(collaborateur: Collaborator): Observable<any[]> {
-    return this.http.post<any[]>('http://localhost:9090/collaborateur/create', collaborateur);
+  createCollaborateur(collaborateur: Collaborator): Observable<Collaborator> {
+    return this.http.post<Collaborator>('http://localhost:9090/collaborateur/create', collaborateur);
   }
 }

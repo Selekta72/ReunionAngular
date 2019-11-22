@@ -33,7 +33,7 @@
           </div>
           <select class="form-control" name="role" [(ngModel)]="collaborateur.role">
             <option selected="" [value]="null">Choisir profession</option>
-            <option *ngFor="let role of roles" [value]="role">{{role.libelle}}</option>
+            <option *ngFor="let role of roles" [ngValue]="role">{{role.libelle}}</option>
           </select>
         </div> <!-- form-group end.// -->
 
