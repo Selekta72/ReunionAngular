@@ -13,15 +13,18 @@ export class CollaborateurComponent implements OnInit {
   constructor(private collaborateurService: CollaborateurService) { }
 
   ngOnInit() {
+    this.getCollaborateurs();
+  }
+
+  getCollaborateurs() {
     this.collaborateurService.getAllCollaborateurs().subscribe(response => {
       this.collaborateurs = response;
     });
   }
 
   deleteCollaborateur(collaborateurId: number) {
-    console.log(collaborateurId);
     this.collaborateurService.deleteCollaborateur(collaborateurId).subscribe(response => {
-      console.log(response);
+      this.getCollaborateurs();
     });
   }
 

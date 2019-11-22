@@ -2,91 +2,89 @@
 
 
 <div class="container">
-<br><br>
-<div class="card bg-light">
-<article class="card-body mx-auto" style="max-width: 400px;">
+  <br><br>
+  <div class="card bg-light">
+    <article class="card-body mx-auto" style="max-width: 400px;">
 
-	<h4 class="card-title mt-3 text-center">Creation de compte</h4>
-	<form>
+      <h4 class="card-title mt-3 text-center">Creation de compte</h4>
+      <form>
 
-	<div class="form-group input-group">
-		<div class="input-group-prepend">
-		    <span class="input-group-text"> <i class="fa fa-user-circle"></i> </span>
-		 </div>
-        <input name="lastname" class="form-control" placeholder="Nom" type="text">
+        <div class="form-group input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text"> <i class="fa fa-user-circle"></i> </span>
+          </div>
+          <input name="nom" [(ngModel)]="collaborateur.nom" class="form-control" placeholder="Nom" type="text">
+          <div class="input-group-prepend">
+            <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+          </div>
+          <input name="prenom" [(ngModel)]="collaborateur.prenom" class="form-control" placeholder="Prénom" type="text">
+        </div> <!-- form-group// -->
 
-        <div class="input-group-prepend">
-                <span class="input-group-text"> <i class="fa fa-user"></i> </span>
-             </div>
-            <input name="firstname" class="form-control" placeholder="Prénom" type="text">
-    </div> <!-- form-group// -->
+        <div class="form-group input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text"> <i class="fa fa-calendar"></i> </span>
+          </div>
+          <input name="dateNaissance" [(ngModel)]="collaborateur.dateNaissance" class="form-control" placeholder="Date de naissance" type="date">
+        </div> <!-- form-group// -->
 
-    <div class="form-group input-group">
-            <div class="input-group-prepend">
-                <span class="input-group-text"> <i class="fa fa-calendar"></i> </span>
-             </div>
-            <input name="dateNaissance" class="form-control" placeholder="Date de naissance" type="date">
-    </div> <!-- form-group// -->
+        <div class="form-group input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text"> <i class="fa fa-building"></i> </span>
+          </div>
+          <select class="form-control" name="role" [(ngModel)]="collaborateur.role">
+            <option selected="" [value]="null">Choisir profession</option>
+            <option *ngFor="let role of roles" [value]="role">{{role.libelle}}</option>
+          </select>
+        </div> <!-- form-group end.// -->
 
-    <div class="form-group input-group">
-    	<div class="input-group-prepend">
-		    <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
-		 </div>
-        <input name="" class="form-control" placeholder="Adresse mail" type="email">
-    </div> <!-- form-group// -->
 
-    <div class="form-group input-group">
-    	<div class="input-group-prepend">
-		    <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
-		</div>
-		<select class="custom-select" style="max-width: 120px;">
-		    <option selected="">+33</option>
-		</select>
-    	<input name="" class="form-control" placeholder="06 XX XX XX XX" type="text">
-    </div> <!-- form-group// -->
 
-    <div class="form-group input-group">
-    	<div class="input-group-prepend">
-		    <span class="input-group-text"> <i class="fa fa-building"></i> </span>
-		</div>
-		<select class="form-control">
-			<option selected="">Choisir profession</option>
-			<option>Directeur Général</option>
-			<option>DSI</option>
-			<option>Comptable</option>
-		</select>
-    </div> <!-- form-group end.// -->
-    
-    <div class="form-group input-group">
-    	<div class="input-group-prepend">
-		    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
-		</div>
-        <input class="form-control" placeholder="Mot de passe" type="password">
-    </div> <!-- form-group// -->
+        <!--    <div class="form-group input-group">-->
+        <!--    	<div class="input-group-prepend">-->
+        <!--		    <span class="input-group-text"> <i class="fa fa-phone"></i> </span>-->
+        <!--		</div>-->
+        <!--		<select class="custom-select" style="max-width: 120px;">-->
+        <!--		    <option selected="">+33</option>-->
+        <!--		</select>-->
+        <!--    	<input name=""  class="form-control" placeholder="06 XX XX XX XX" type="text">-->
+        <!--    </div> &lt;!&ndash; form-group// &ndash;&gt;-->
 
-    <div class="form-group input-group">
-    	<div class="input-group-prepend">
-		    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
-		</div>
-        <input class="form-control" placeholder="Confirmet mot de passe" type="password">
-    </div> <!-- form-group// -->      
+        <div class="form-group input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+          </div>
+          <input name="email" class="form-control" [(ngModel)]="collaborateur.email" placeholder="Adresse mail" type="email">
+        </div> <!-- form-group// -->
 
-    <div class="form-group">
-        <button type="submit" class="btn btn-primary btn-block"> Créer le compte</button>
-    </div> <!-- form-group// -->     
+        <div class="form-group input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+          </div>
+          <input class="form-control" name="mdp" [(ngModel)]="collaborateur.mdp" placeholder="Mot de passe" type="password">
+        </div> <!-- form-group// -->
 
-    <p class="text-center">Déjà un compte ? <a href="/connexion">Connexion</a> </p>                                                                 
-</form>
-</article>
-</div> <!-- card.// -->
+        <!--    <div class="form-group input-group">-->
+        <!--    	<div class="input-group-prepend">-->
+        <!--		    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>-->
+        <!--		</div>-->
+        <!--        <input class="form-control" [(ngModel)]="collaborateur.mdp" placeholder="Confirmer mot de passe" type="password">-->
+        <!--    </div> &lt;!&ndash; form-group// &ndash;&gt;      -->
 
-</div> 
+        <div class="form-group">
+          <button type="submit" (click)="createCollaborateur()" class="btn btn-primary btn-block"> Créer le compte</button>
+        </div> <!-- form-group// -->
+        <p class="text-center">Déjà un compte ? <a href="/connexion">Connexion</a> </p>
+      </form>
+    </article>
+  </div> <!-- card.// -->
+
+</div>
 <!--container end.//-->
 
 <br><br>
-<article class="bg-secondary mb-3 fixed-bottom">  
-<div class="card-body text-center">
+<article class="bg-secondary mb-3 fixed-bottom">
+  <div class="card-body text-center">
     <h3 class="text-white mt-3">Gestion de réunions</h3>
-<p class="h5 text-white">BOUCHET Séverin | Julien PINTO | Aurélien Duperray | Damien Marie</p>
-</div>
+    <p class="h5 text-white">BOUCHET Séverin | Julien PINTO | Aurélien Duperray | Damien Marie</p>
+  </div>
 </article>

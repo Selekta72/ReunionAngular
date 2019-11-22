@@ -9,6 +9,7 @@ import { ConnexionComponent } from './components/connexion/connexion.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { CollaborateurComponent } from './components/collaborateur/collaborateur.component';
 import { AddreunionComponent } from './components/addreunion/addreunion.component';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { AddreunionComponent } from './components/addreunion/addreunion.componen
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

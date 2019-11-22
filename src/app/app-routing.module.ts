@@ -7,6 +7,7 @@ import {CollaborateurComponent} from './components/collaborateur/collaborateur.c
 
 
 const routes: Routes = [
+  { path: '', redirectTo: '/connexion', pathMatch: 'full'},
   { path: 'inscription', component: InscriptionComponent },
   { path: 'connexion', component: ConnexionComponent },
   { path: 'dashboard', component: DashboardComponent },
