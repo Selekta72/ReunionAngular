@@ -8,6 +8,7 @@ import { InscriptionComponent } from './components/inscription/inscription.compo
 import { ConnexionComponent } from './components/connexion/connexion.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { CollaborateurComponent } from './components/collaborateur/collaborateur.component';
+import { AddreunionComponent } from './components/addreunion/addreunion.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { CollaborateurComponent } from './components/collaborateur/collaborateur
     InscriptionComponent,
     ConnexionComponent,
     DashboardComponent,
-    CollaborateurComponent
+    CollaborateurComponent,
+    AddreunionComponent
   ],
   imports: [
     BrowserModule,
