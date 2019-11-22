@@ -16,4 +16,8 @@ export class RoleService {
   getAllRoles(): Observable<any[]> {
     return this.http.get<any[]>('http://localhost:9090/role/read');
   }
+
+  deleteRole(roleId: number): Observable<any[]> {
+    return this.http.delete<any[]>('http://localhost:9090/collaborateur/delete/' + collaborateurId);
+  }
 }

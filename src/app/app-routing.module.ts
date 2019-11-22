@@ -5,6 +5,7 @@ import { ConnexionComponent } from './components/connexion/connexion.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import {CollaborateurComponent} from './components/collaborateur/collaborateur.component';
 import {AddreunionComponent} from './components/addreunion/addreunion.component';
+import {RoleComponent} from './components/role/role.component';
 
 
 const routes: Routes = [
@@ -13,7 +14,8 @@ const routes: Routes = [
   { path: 'connexion', component: ConnexionComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'collaborateur', component: CollaborateurComponent },
-  { path: 'addreunion', component: AddreunionComponent }
+  { path: 'addreunion', component: AddreunionComponent },
+  { path: 'role', component: RoleComponent }
 ];
 
 @NgModule({

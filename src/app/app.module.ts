@@ -10,6 +10,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { CollaborateurComponent } from './components/collaborateur/collaborateur.component';
 import { AddreunionComponent } from './components/addreunion/addreunion.component';
 import {FormsModule} from '@angular/forms';
+import { RoleComponent } from './components/role/role.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import {FormsModule} from '@angular/forms';
     ConnexionComponent,
     DashboardComponent,
     CollaborateurComponent,
-    AddreunionComponent
+    AddreunionComponent,
+    RoleComponent
   ],
   imports: [
     BrowserModule,

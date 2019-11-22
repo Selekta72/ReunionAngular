@@ -12,17 +12,17 @@
             Dashboard
           </a>
         </li>
-        <li class="nav-item active">
+        <li class="nav-item">
           <a class="nav-link" href="/collaborateur">
             Collaborateurs
-            <span class="sr-only">(current)</span>
           </a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/addreunion">Ajouter réunion</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/role">Rôle</a>
+        <li class="nav-item active">
+          <a class="nav-link" href="/role">Rôle
+            <span class="sr-only">(current)</span></a>
         </li>
       </ul>
     </div>
@@ -38,26 +38,37 @@
         <table class="table table-info">
           <thead>
           <tr>
-            <th scope="col">Prénom</th>
-            <th scope="col">Nom</th>
-            <th scope="col">Email</th>
-            <th scope="col">date de naissance</th>
-            <th scope="col">Actions</th>
+            <th scope="col">Id</th>
+            <th scope="col">Libelle</th>
+            <th scope="col">Action</th>
           </tr>
           </thead>
           <tbody>
-          <tr *ngFor="let collaborateur of collaborateurs">
-            <td>{{collaborateur.prenom}}</td>
-            <td>{{collaborateur.nom}}</td>
-            <td>{{collaborateur.email}}</td>
-            <td>{{collaborateur.dateNaissance}}</td>
-            <td><button class="btn btn-danger" (click)="deleteCollaborateur(collaborateur.id)">supprimer</button></td>
+          <tr *ngFor="let role of roles">
+            <td>{{role.id}}</td>
+            <td>{{role.libelle}}</td>
+            <td><button class="btn btn-danger" (click)="deleteRole(role.id)">supprimer</button></td>
           </tr>
           </tbody>
         </table>
       </div>
     </div>
   </div>
+
+<!--  <div class="card bg-light">-->
+<!--    <article class="card-body mx-auto" style="max-width: 400px;">-->
+
+<!--      <h4 class="card-title mt-3 text-center">Creation d'un rôle</h4>-->
+<!--      <form>-->
+<!--        <div class="form-group input-group">-->
+<!--          <div class="input-group-prepend">-->
+<!--            <span class="input-group-text"> <i class="fas fa-bullseye"></i> </span>-->
+<!--          </div>-->
+<!--          <input name="nom" [(ngModel)]="role.libelle" class="form-control" placeholder="Libellé" type="text">-->
+<!--        </div> &lt;!&ndash; form-group// &ndash;&gt;-->
+<!--      </form>-->
+<!--    </article>-->
+<!--  </div> &lt;!&ndash; card.// &ndash;&gt;-->
 </div>
 <br><br>
 <article class="bg-secondary mb-3 navbar-fixed-bottom">

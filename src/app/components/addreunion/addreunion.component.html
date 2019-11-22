@@ -23,7 +23,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">blabla</a>
+          <a class="nav-link" href="/role">Rôle</a>
         </li>
       </ul>
     </div>
@@ -40,11 +40,14 @@
 
         <div class="form-group input-group">
           <div class="input-group-prepend">
-            <span class="input-group-text"> <i class="fa fa-user-circle"></i> </span>
+            <span class="input-group-text"> <i class="fas fa-bullseye"></i> </span>
           </div>
           <input name="nom" [(ngModel)]="reunion.libelle" class="form-control" placeholder="Libellé" type="text">
+        </div> <!-- form-group// -->
+
+        <div class="form-group input-group">
           <div class="input-group-prepend">
-            <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+            <span class="input-group-text"> <i class="fa fa-bullseye"></i> </span>
           </div>
           <input name="prenom" [(ngModel)]="reunion.objectif" class="form-control" placeholder="Objectif" type="text">
         </div> <!-- form-group// -->
@@ -58,7 +61,7 @@
 
         <div class="form-group input-group">
           <div class="input-group-prepend">
-            <span class="input-group-text"> <i class="fa fa-building"></i> </span>
+            <span class="input-group-text"> <i class="fa fa-user"></i> </span>
           </div>
           <select class="form-control" name="role" multiple [(ngModel)]="reunion.participants">
             <option selected="" disabled [value]="null">Choisir participants</option>
@@ -68,7 +71,7 @@
 
         <div class="form-group input-group">
           <div class="input-group-prepend">
-            <span class="input-group-text"> <i class="fa fa-building"></i> </span>
+            <span class="input-group-text"> <i class="fa fa-user-circle"></i> </span>
           </div>
           <select class="form-control" name="role" [(ngModel)]="reunion.referant">
             <option selected="" disabled [value]="null">Choisir référant</option>
@@ -78,7 +81,7 @@
 
         <div class="form-group input-group">
           <div class="input-group-prepend">
-            <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+            <span class="input-group-text"> <i class="fa fa-building"></i> </span>
           </div>
           <input name="email" class="form-control" [(ngModel)]="reunion.lieu" placeholder="Lieu" type="email">
         </div> <!-- form-group// -->
@@ -91,7 +94,7 @@
   </div> <!-- card.// -->
 </div>
 
-<article class="bg-secondary mb-3 navbar-fixed-bottom">
+<article class="bg-secondary mt-5 navbar-fixed-bottom">
   <div class="card-body text-center">
     <h3 class="text-white mt-3">Gestion de réunions</h3>
     <p class="h5 text-white">Bouchet Séverin | Pinto Julien | Duperray Aurélien | Marie Damien</p>
